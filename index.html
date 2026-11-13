@@ -41,6 +41,19 @@
       width: 100%;
     }
 
+    video,
+    iframe {
+      display: block;
+      max-width: 100%;
+      margin: 0.5rem 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 70vh;
+      border: 0;
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -91,6 +104,8 @@
       <pre id="status">You gotta <abbr title="Geometry Dash Reference">Press Start</abbr>.</pre>
       <a id="download" hidden>Download</a>
       <img id="preview" alt="" hidden>
+      <video id="previewVideo" controls hidden></video>
+      <iframe id="previewFrame" title="preview" hidden></iframe>
     </fieldset>
   </main>
 
