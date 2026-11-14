@@ -69,7 +69,7 @@
 
     a {
       display: inline-block;
-      margin: 0.5rem 0;
+      margin: 0.5rem 1rem 0.5rem 0;
       overflow-wrap: anywhere;
     }
 
@@ -93,6 +93,17 @@
           </select>
         </label>
         <label><input id="compact" type="checkbox"> Compact it?</label>
+        <div>Format
+          <label><input id="fmtPng" name="format" type="radio" checked> PNG</label>
+          <label><input id="fmtAnim" name="format" type="radio"> Animated (60fps WebP)</label>
+        </div>
+        <label id="animLen" hidden>Animation length
+          <select id="animSecs">
+            <option value="1">1 second</option>
+            <option value="2" selected>2 seconds</option>
+            <option value="4">4 seconds</option>
+          </select>
+        </label>
       </div>
       <button id="start" type="button">Start</button>
       <button id="decode" type="button">Decode</button>
@@ -103,6 +114,7 @@
       <progress id="bar" max="100" value="0"></progress>
       <pre id="status">You gotta <abbr title="Geometry Dash Reference">Press Start</abbr>.</pre>
       <a id="download" hidden>Download</a>
+      <a id="downloadAnim" hidden>Download</a>
       <img id="preview" alt="" hidden>
       <video id="previewVideo" controls hidden></video>
       <iframe id="previewFrame" title="preview" hidden></iframe>
